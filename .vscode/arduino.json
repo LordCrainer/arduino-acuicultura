@@ -1,4 +1,6 @@
 {
-    "sketch": "http.ino",
-    "board": "arduino:avr:uno"
+    "sketch": "http\\http.ino",
+    "board": "arduino:avr:uno",
+    "programmer": "ArduinoISP",
+    "output": "./build"
 }
