@@ -10,10 +10,21 @@ EthernetServer server = EthernetServer(80);
 void setup()
 {
     Serial.begin(9600);
-
+    pinMode(9, INPUT);
     // initialize the ethernet device
     Serial.println("inicializando red...");
     //Ethernet.begin(mac, ip, DNS, gateway, subnet);
+    if (Ethernet.begin(mac) == 0)
+    {
+        Serial.println("Failed to configure Ethernet using DHCP");
+        for (;;)
+            ;
+    }
+    else
+    {
+        Serial.print("IP asignada por DHCP: ");
+        Serial.println(Ethernet.localIP());
+    }
     if (Ethernet.begin(mac) == 0)
     {
         Serial.println("Failed to configure Ethernet using DHCP");
