@@ -25,17 +25,6 @@ void setup()
         Serial.print("IP asignada por DHCP: ");
         Serial.println(Ethernet.localIP());
     }
-    if (Ethernet.begin(mac) == 0)
-    {
-        Serial.println("Failed to configure Ethernet using DHCP");
-        for (;;)
-            ;
-    }
-    else
-    {
-        Serial.print("IP asignada por DHCP: ");
-        Serial.println(Ethernet.localIP());
-    }
 
     // start listening for clients
     server.begin();
