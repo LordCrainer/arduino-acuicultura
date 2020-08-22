@@ -1,7 +1,6 @@
 #include <SPI.h>
 #include <Ethernet.h>
 
-// the media access control (ethernet hardware) address for the shield:
 byte mac[] = {0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xYY}; //Sustituir YY por el numero de MAC correcto
 
 // WEB defaults to port 80
