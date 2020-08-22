@@ -10,7 +10,6 @@ EthernetServer server = EthernetServer(80);
 void setup()
 {
     Serial.begin(9600);
-    pinMode(9, INPUT);
     // initialize the ethernet device
     Serial.println("inicializando red...");
     //Ethernet.begin(mac, ip, DNS, gateway, subnet);
